@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności — Gmail Local Archive</title><style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 48px 20px; background: #f3f6f1; color: #263b38; font: 17px/1.75 system-ui, sans-serif; }
+    main { max-width: 760px; margin: auto; padding: 36px; background: white; border: 1px solid #dce5dc; border-radius: 14px; }
+    h1 { font-size: 30px; line-height: 1.25; color: #245d4f; }
+    h2 { font-size: 21px; margin-top: 30px; }
+    .label { color: #5c7467; font-size: 14px; }
+    a { color: #245d4f; }
+    @media (max-width: 500px) { main { padding: 22px; } h1 { font-size: 25px; } }
+  </style></head><body><main>
+<nav aria-label="Nawigacja"><a href="index.html">Strona główna</a> · <a href="privacy.html">Polityka prywatności</a> · <a href="terms.html">Warunki korzystania</a></nav>
+<h1>Polityka prywatności</h1><p class="label">Gmail Local Archive · wersja z 10 września 2026 r.</p>
+
+<h2>1. Aplikacja i jej właściciel</h2>
+<p>Gmail Local Archive jest osobistą aplikacją lokalną utrzymywaną przez użytkownika GitHub <a href="https://github.com/kazikgohra">kazikgohra</a>. Służy do wykonywania i przeglądania kopii własnej poczty na komputerze z Windows. Nie jest publiczną usługą przechowywania poczty. Adres pomocy dotyczący autoryzacji jest wskazany na ekranie zgody Google.</p>
+<h2>2. Odczytywane dane i cel ich wykorzystania</h2>
+<p>Po udzieleniu zgody OAuth program korzysta wyłącznie z zakresu <code>https://www.googleapis.com/auth/gmail.readonly</code>. Zakres ten technicznie pozwala czytać pocztę; program ogranicza wybór wiadomości do starszych niż dwa lata, pomijając Spam i Kosz.</p>
+<p>Program odczytuje adres autoryzowanego konta, identyfikatory i daty wiadomości, nazwy etykiet, rozmiary oraz pełne wybrane wiadomości: nagłówki, nadawców, odbiorców, tematy, treść tekstową i HTML oraz załączniki. Informacje służą wyłącznie do utworzenia kopii, uniknięcia duplikatów, kontroli poprawności oraz lokalnego wyszukiwania i przeglądania.</p>
+<p>Program nie usuwa wiadomości na Gmailu, nie zmienia etykiet, nie oznacza wiadomości jako przeczytanych i nie wysyła poczty. Przeglądarka lokalnego archiwum nie korzysta z Gmail API ani z tokenów Google. Nie przeszukuje zawartości załączników.</p>
+<h2>3. Przechowywanie i zabezpieczenia</h2>
+<p>Wiadomości EML, indeks CSV, bazy kontrolne i wyszukiwania, logi oraz raporty są zapisywane lokalnie w katalogu archiwum, domyślnie <code>C:\Gmail_Archive</code>. Indeksy mogą zawierać dane osobowe z wiadomości. Kopie załączników otwieranych przez użytkownika są zapisywane w lokalnym folderze tymczasowym; funkcja „Zapisz jako…” zapisuje kopię we wskazanym miejscu.</p>
+<p>Program nie pobiera ani nie zapisuje hasła Google. Token odświeżania i dane klienta potrzebne do jego użycia są przechowywane lokalnie w pliku szyfrowanym przez Windows DPAPI, powiązanym z kontem Windows użytkownika. Pobrany ręcznie plik konfiguracji klienta OAuth JSON może pozostawać na dysku do chwili jego ręcznego usunięcia.</p>
+<p>Połączenia z Google odbywają się przez HTTPS. Dostęp do folderów archiwum jest ograniczony uprawnieniami Windows. Same EML i indeksy nie są szyfrowane przez aplikację. Bezpieczeństwo danych zależy także od zabezpieczenia konta, dysku i kopii zapasowych użytkownika.</p>
+<h2>4. Udostępnianie i inne usługi</h2>
+<p>Aplikacja nie wysyła archiwum, treści maili, załączników ani tokenów na GitHub Pages, do autora, usług analitycznych, reklamowych ani systemów AI. Nie sprzedaje danych i nie wykorzystuje ich do reklam lub trenowania modeli. Dane uzyskane przez Google API są używane zgodnie z <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, w tym zasadami ograniczonego wykorzystania danych (Limited Use).</p>
+<p>Autoryzację i dostęp do źródłowej poczty zapewnia Google. Otwarcie załącznika przekazuje lokalną kopię do programu wybranego w Windows; dalsze działanie tego programu podlega jego własnym ustawieniom i zasadom. Ręczne udostępnianie plików lub synchronizowanie folderu przez użytkownika nie jest funkcją tego archiwizatora.</p>
+<h2>5. Okres przechowywania i usuwanie</h2>
+<p>Kopie wiadomości, indeksy i raporty są przechowywane do czasu ich usunięcia przez użytkownika. Aplikacja nie stosuje automatycznego terminu usuwania archiwum. Tymczasowe kopie otwieranych załączników starsze niż siedem dni są sprzątane podczas uruchamiania przeglądarki, o ile pliki nie są zablokowane.</p>
+<p>Użytkownik może cofnąć zgodę w ustawieniach połączeń z aplikacjami w koncie Google i usunąć lokalny plik tokenu. Cofnięcie zgody zatrzymuje możliwość dalszego pobierania, ale nie usuwa już zapisanej kopii. Aby całkowicie usunąć lokalne dane, należy zakończyć program i usunąć archiwum, jego indeksy i kopie załączników oraz własne dodatkowe kopie zapasowe. Usunięcie kopii lokalnej nie usuwa wiadomości z Gmaila.</p>
+<h2>6. Publiczna strona informacyjna</h2>
+<p>Ta strona nie służy do logowania do Gmaila i nie ma dostępu do lokalnego archiwum. Nie zawiera dodanych przez autora reklam, narzędzi analitycznych ani formularza zbierającego dane. Hosting GitHub Pages może przetwarzać techniczne dane odwiedzin, takie jak adres IP, zgodnie z <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">polityką prywatności GitHub</a>.</p>
+<h2>7. Zmiany i kontakt</h2>
+<p>Zmiany sposobu wykorzystywania danych wymagają aktualizacji tego opisu i odpowiedniej informacji przed ich wdrożeniem; rozszerzenie dostępu wymaga nowej zgody. Autora identyfikuje <a href="https://github.com/kazikgohra">profil kazikgohra</a>. W publicznych zgłoszeniach nie należy umieszczać treści poczty, haseł, tokenów ani załączników.</p>
+
+</main></body></html>
